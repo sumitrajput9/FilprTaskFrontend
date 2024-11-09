@@ -100,7 +100,7 @@ const Home = () => {
                       name="mobileNumber"
                       className="input"
                       placeholder="Phone Number"
-                      value={formData.phone}
+                      value={formData.mobileNumber}
                       onChange={handleChange}
                     />
                   </Form.Group>
