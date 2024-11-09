@@ -1,41 +1,10 @@
-import { defineConfig } from 'vite';
-import ViteImagemin from 'vite-plugin-imagemin';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-  react(),
-    ViteImagemin({
-      gifsicle: { optimizationLevel: 7 },
-      optipng: { optimizationLevel: 7 },
-      mozjpeg: { quality: 80 },
-      pngquant: { quality: [0.6, 0.8] },
-      svgo: {
-        plugins: [
-          { removeViewBox: false },
-          { cleanupIDs: false }
-        ]
-      }
-    })
-  ],
+  plugins: [react()],
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules/react')) {
-            return 'react';
-          }
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000, // Increase the chunk size warning limit
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // Optional: remove console logs
-      },
-    },
-  },
-});
+    chunkSizeWarningLimit: 1000,  // Increase the chunk size limit to 1000 KB (1 MB)
+  }
+})
