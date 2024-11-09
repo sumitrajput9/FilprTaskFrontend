@@ -6,7 +6,7 @@ import dollar from "../../assets/circle-dollar-sign.svg";
 import client1 from "../../assets/pexels-brett-sayles-2881232-1.svg";
 import client2 from "../../assets/pexels-brett-sayles-2881232-2.svg";
 import client3 from "../../assets/pexels-brett-sayles-2881232-3.svg";
-export function Design() {
+const Designs=()=> {
     const cardsData = [
         {
             imgSrc: home,
@@ -87,3 +87,4 @@ export function Design() {
         </div>
     );
 }
+export default Designs;

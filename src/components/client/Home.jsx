@@ -5,8 +5,8 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import Projects from "./Projects";
 import Footer from "../../layouts/Footer";
 import Ellipse from "./Ellipse";
-import { Design } from "./Design";
 import Client from "./Client";
+import Designs from "./Design";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -132,7 +132,7 @@ const Home = () => {
       </div>
 
       <div style={{ marginTop: "50px" }}>
-        <Design />
+        <Designs />
       </div>
 
       <div style={{ marginTop: "50px", display: "flex", justifyContent: "center" }}>

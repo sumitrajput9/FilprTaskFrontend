@@ -5,8 +5,6 @@ import { Button, Col, Container, Form,Image, Row } from "react-bootstrap";
 import outerEllipse from "../../assets/Ellipse1.svg";
 import innerEllipse from "../../assets/Ellipse2.svg";
 import rightEllipse from "../../assets/Ellipse3.svg";
-import Projects from "./Projects";
-import Footer from "../../layouts/Footer";
 const Ellipse = () => {
     return (
         <>
